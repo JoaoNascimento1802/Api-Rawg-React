@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Api-Rawg-React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/JoaoNascimento1802/Api-Rawg-React?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/JoaoNascimento1802/Api-Rawg-React?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/JoaoNascimento1802/Api-Rawg-React?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/JoaoNascimento1802/Api-Rawg-React?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/JoaoNascimento1802/Api-Rawg-React?style=for-the-badge)
 
-## Available Scripts
+> Projeto React que consome a API pública [RAWG.io](https://rawg.io/apidocs) para exibir jogos da série **Dark Souls** com cards interativos em linha.
 
-In the project directory, you can run:
+## 💻 Pré-requisitos
 
-### `npm start`
+Antes de começar, verifique se você tem os seguintes requisitos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js e NPM instalados.
+- Git instalado para clonar o repositório.
+- VSCode ou outro editor de código.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Instalando o Api-Rawg-React
 
-### `npm test`
+Clone o repositório:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/JoaoNascimento1802/Api-Rawg-React.git
+```
 
-### `npm run build`
+Entre na pasta do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cd Api-Rawg-React
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Instale as dependências:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+Crie um arquivo `.env` na raiz do projeto com sua chave da API RAWG:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```env
+REACT_APP_RAWG_API_KEY=sua_chave_aqui
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+⚠️ **Importante:** A chave de API pode ser obtida gratuitamente em [RAWG.io](https://rawg.io/apidocs).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ▶️ Rodando o projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Inicie o servidor de desenvolvimento:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Acesse no navegador:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+http://localhost:3000
+```
 
-### Code Splitting
+Você verá uma lista com **cards dos jogos da franquia Dark Souls**, mostrando imagem, título, ID e nome do desenvolvedor.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🖼️ Funcionalidades
 
-### Analyzing the Bundle Size
+- 🔍 Busca automática de jogos relacionados à franquia "Dark Souls"
+- 📦 Requisições assíncronas com Axios
+- 🧩 Cards com ID, título, imagem e desenvolvedor
+- 💡 Organização responsiva em 3 colunas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📁 Estrutura de Pastas
 
-### Making a Progressive Web App
+```
+src/
+├── components/
+│   └── DarkSoulsGames/
+│       ├── DarkSoulsGames.jsx
+│       └── DarkSoulsGames.css
+├── App.js
+├── index.js
+└── .env
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contribuindo
 
-### Advanced Configuration
+Para contribuir com este projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork este repositório.
+2. Crie um branch: `git checkout -b minha-feature`.
+3. Faça suas alterações e commit: `git commit -m 'feat: minha nova feature'`.
+4. Envie para seu fork: `git push origin minha-feature`.
+5. Abra um Pull Request.
 
-### Deployment
+## 👤 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JoaoNascimento1802">
+        <img src="https://avatars.githubusercontent.com/u/112444368?v=4" width="100px;" alt="Foto do João"/><br>
+        <sub>
+          <b>João Nascimento</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-### `npm run build` fails to minify
+## 📝 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob licença. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
