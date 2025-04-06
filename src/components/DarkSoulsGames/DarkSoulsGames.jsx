@@ -4,13 +4,14 @@ import './DarkSoulsGames.css';
 
 const DarkSoulsGames = () => {
   const [games, setGames] = useState([]);
+  const apiKey = process.env.REACT_APP_RAWG_API_KEY;
 
   useEffect(() => {
     const fetchGames = async () => {
       try {
         const response = await axios.get('https://api.rawg.io/api/games', {
           params: {
-            key: 'aeea6f94d21f4aacaa91703768802042',
+            key: apiKey,
             search: 'dark souls'
           }
         });
@@ -20,7 +21,7 @@ const DarkSoulsGames = () => {
         const gamesWithAuthors = await Promise.all(
           results.map(async (game) => {
             const gameDetails = await axios.get(`https://api.rawg.io/api/games/${game.id}`, {
-              params: { key: 'aeea6f94d21f4aacaa91703768802042' }
+              params: { key: apiKey }
             });
 
             return {
@@ -39,7 +40,7 @@ const DarkSoulsGames = () => {
     };
 
     fetchGames();
-  }, []);
+  }, [apiKey]);
 
   return (
     <div className="container">
